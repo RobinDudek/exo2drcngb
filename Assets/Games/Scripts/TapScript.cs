@@ -5,6 +5,9 @@ using UnityEngine;
 public class TapScript : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    public Material[] materials;
+
     void Start()
     {
         
