@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RotationYScript : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,6 @@ public class RotationYScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(0, 0.15f, 0, Space.Self);
     }
 }
