@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 220537175}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Cube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -417,7 +417,7 @@ GameObject:
   - component: {fileID: 221361265}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Sphere
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -525,7 +525,7 @@ GameObject:
   - component: {fileID: 415836033}
   - component: {fileID: 415836032}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Cylindre
   m_TagString: CylindrePremierPlan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -620,8 +620,8 @@ GameObject:
   - component: {fileID: 504787399}
   - component: {fileID: 504787398}
   m_Layer: 0
-  m_Name: Cylinder
-  m_TagString: Untagged
+  m_Name: Cylindre
+  m_TagString: Cylindre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -799,7 +799,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: aeef5c55fc05d23499412e0c84206d06, type: 3}
+      - m_Target: {fileID: 11500000, guid: 45d2e3212aa89474cbd0ccbf222227f7, type: 3}
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
@@ -1159,7 +1159,7 @@ GameObject:
   - component: {fileID: 1725197130}
   m_Layer: 0
   m_Name: PremierPlan
-  m_TagString: Untagged
+  m_TagString: PremierPlan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
