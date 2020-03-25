@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class ReturnScript : MonoBehaviour
 {
-    GameObject sphere;
-    GameObject cube;
-    GameObject cylindre;
-    GameObject secondplan;
 
+    public GameObject sphere;
+    public GameObject cube;
+    public GameObject cylindre;
+    public GameObject secondplan;
+    public GameObject canvas;
     // Start is called before the first frame update
     void Start()
     {
-        sphere = GameObject.FindGameObjectWithTag("SpherePremierPlan");
-        cube = GameObject.FindGameObjectWithTag("CubePremierPlan");
-        cylindre = GameObject.FindGameObjectWithTag("CylindrePremierPlan");
-        secondplan = GameObject.FindGameObjectWithTag("SecondPlan");
     }
 
     // Update is called once per frame
@@ -24,11 +21,12 @@ public class ReturnScript : MonoBehaviour
         
     }
 
-    public void returnButton()
+    public void ReturnButton()
     {
         sphere.SetActive(false);
         cube.SetActive(false);
         cylindre.SetActive(false);
         secondplan.SetActive(true);
+        canvas.SetActive(false);
     }
 }

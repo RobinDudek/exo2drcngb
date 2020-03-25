@@ -10,17 +10,18 @@ public class TapScript : MonoBehaviour
     private Renderer rend;
     private int cpt;
 
-    GameObject sphere;
-    GameObject cube;
-    GameObject cylindre;
-    GameObject secondplan;
+    public GameObject sphere;
+    public GameObject cube;
+    public GameObject cylindre;
+    public GameObject secondplan;
+    public GameObject canvas;
 
     void Start()
     {
-        sphere = GameObject.FindGameObjectWithTag("SpherePremierPlan"); 
-        cube = GameObject.FindGameObjectWithTag("CubePremierPlan");
-        cylindre = GameObject.FindGameObjectWithTag("CylindrePremierPlan");
-        secondplan = GameObject.FindGameObjectWithTag("SecondPlan");
+        /*sphere = GameObject.FindWithTag("SpherePremierPlan"); 
+        cube = GameObject.FindWithTag("CubePremierPlan");
+        cylindre = GameObject.FindWithTag("CylindrePremierPlan");
+        secondplan = GameObject.FindWithTag("SecondPlan");*/
     }
 
     // Update is called once per frame
@@ -60,6 +61,7 @@ public class TapScript : MonoBehaviour
                     }
 
                     secondplan.SetActive(false);
+                    canvas.SetActive(true);
                 }
                 if (raycastHit.collider.transform.parent.CompareTag("PremierPlan"))
                 {

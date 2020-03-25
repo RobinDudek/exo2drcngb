@@ -24,7 +24,7 @@ public class RotationYScript : MonoBehaviour
                 // APPLY ROTATION
                 if (touch0.phase == TouchPhase.Moved)
                 {
-                    transform.Rotate(0f, touch0.deltaPosition.x, 0f);
+                    transform.Rotate(0f, touch0.deltaPosition.x * -0.15f, 0f);
                 }
             }
         } else
