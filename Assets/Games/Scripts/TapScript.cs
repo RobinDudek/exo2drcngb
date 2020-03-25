@@ -10,11 +10,17 @@ public class TapScript : MonoBehaviour
     private Renderer rend;
     private int cpt;
 
+    GameObject sphere;
+    GameObject cube;
+    GameObject cylindre;
+    GameObject secondplan;
+
     void Start()
     {
-        rend = GetComponent<Renderer>();
-        rend.enabled = true;
-        rend.sharedMaterial = materials[cpt];
+        sphere = GameObject.FindGameObjectWithTag("SpherePremierPlan"); 
+        cube = GameObject.FindGameObjectWithTag("CubePremierPlan");
+        cylindre = GameObject.FindGameObjectWithTag("CylindrePremierPlan");
+        secondplan = GameObject.FindGameObjectWithTag("SecondPlan");
     }
 
     // Update is called once per frame
@@ -22,6 +28,9 @@ public class TapScript : MonoBehaviour
     {
         if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
         {
+
+            Debug.Log("Hello j'ai cliqué");
+
             Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
             RaycastHit raycastHit;
             if (Physics.Raycast(raycast, out raycastHit))
@@ -31,19 +40,34 @@ public class TapScript : MonoBehaviour
                     if (raycastHit.collider.CompareTag("Sphere"))
                     {
                         Debug.Log("Sphere clicked");
+                        sphere.SetActive(true);
+                        cube.SetActive(false);
+                        cylindre.SetActive(false);
                     }
                     if (raycastHit.collider.CompareTag("Cube"))
                     {
                         Debug.Log("Cube clicked");
+                        sphere.SetActive(false);
+                        cube.SetActive(true);
+                        cylindre.SetActive(false);
                     }
                     if (raycastHit.collider.CompareTag("Cylindre"))
                     {
                         Debug.Log("Cylindre clicked");
+                        sphere.SetActive(false);
+                        cube.SetActive(false);
+                        cylindre.SetActive(true);
                     }
+
+                    secondplan.SetActive(false);
                 }
                 if (raycastHit.collider.transform.parent.CompareTag("PremierPlan"))
                 {
-                    if (raycastHit.collider.CompareTag("SpherePremierPlan"))
+                    rend = raycastHit.collider.GetComponent<Renderer>();
+                    rend.enabled = true;
+                    onTap();
+
+                    /*if (raycastHit.collider.CompareTag("SpherePremierPlan"))
                     {
                         Debug.Log("Sphere clicked");
                     }
@@ -54,7 +78,8 @@ public class TapScript : MonoBehaviour
                     if (raycastHit.collider.CompareTag("CylindrePremierPlan"))
                     {
                         Debug.Log("Cylindre clicked");
-                    }
+                    }*/
+
                 }
             }
         }
@@ -69,4 +94,5 @@ public class TapScript : MonoBehaviour
         }
         rend.sharedMaterial = materials[cpt];
     }
+
 }
